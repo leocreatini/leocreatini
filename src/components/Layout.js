@@ -9,9 +9,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import PageLimit from '../PageLimit'
-import Header from '../Header'
-import './styles.css'
+import PageLimit from './PageLimit'
+import Header from './Header'
+import '.Layout.css'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
