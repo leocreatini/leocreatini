@@ -3,9 +3,9 @@ import styled, { css, keyframes } from 'styled-components'
 import { Link as GatsbyLink } from 'gatsby'
 
 const glow = keyframes`
-  0% { background: #28F; opacity: 0; }
- 50% { background: #28F; opacity: 1; }
- 100% { background: #28F; opacity: 0; }
+  0% { opacity: 1; }
+ 50% { opacity: 0.65; }
+ 100% { opacity: 1; }
 `
 
 const LinkStyles = css`
@@ -31,11 +31,7 @@ const LinkStyles = css`
   &:hover,
   &:active {
     border-bottom-color: transparent;
-
-    &:after,
-    &:after {
-      animation: ${glow} 1200ms 120ms ease-in-out infinite;
-    }
+    animation: ${glow} 1200ms 120ms ease-in-out infinite;
   }
 `
 
