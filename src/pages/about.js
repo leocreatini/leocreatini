@@ -26,8 +26,12 @@ const AboutPage = () => (
     <SEO title="About" />
     <CenterCenter>
       <ResponsiveCard>
-        <FlexBox alignItems="center" justifyContent="space-between">
-          <H2>About</H2>
+        <FlexBox
+          alignItems="center"
+          justifyContent="space-between"
+          margin="0 0 1.5rem"
+        >
+          <H2 margin="0">About</H2>
           <InternalLink to="/">Go Back</InternalLink>
         </FlexBox>
         <P>High 20's leveled Web Dev. Human.</P>

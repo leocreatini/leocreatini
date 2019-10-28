@@ -11,7 +11,7 @@ const glow = keyframes`
 const LinkStyles = css`
   text-decoration: none;
   color: #fafafa;
-  transition: border-bottom-color 180ms ease-in-out;
+  transition: border-bottom 180ms ease-in-out;
   position: relative;
   height: 1rem;
   line-height: 1rem;
@@ -30,7 +30,7 @@ const LinkStyles = css`
 
   &:hover,
   &:active {
-    border-bottom-color: transparent;
+    border-bottom: 1px solid transparent;
     animation: ${glow} 1200ms 120ms ease-in-out infinite;
   }
 `
