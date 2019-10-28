@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
@@ -8,11 +9,23 @@ import { H2, P } from '../components/Typography'
 import { InternalLink } from '../components/Link'
 import CenterCenter from '../components/CenterCenter'
 
+const ResponsiveCard = styled(Card)`
+  width: 18rem;
+
+  @media (min-width: 450px) {
+    width: 24rem;
+  }
+
+  @media (min-width: 640px) {
+    width: 30rem;
+  }
+`
+
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
     <CenterCenter>
-      <Card width="35rem">
+      <ResponsiveCard>
         <FlexBox alignItems="center" justifyContent="space-between">
           <H2>About</H2>
           <InternalLink to="/">Go Back</InternalLink>
@@ -29,7 +42,7 @@ const AboutPage = () => (
           useful — it has to spark curiosity, solve something important, and
           feel like a natural extension of your body.
         </P>
-      </Card>
+      </ResponsiveCard>
     </CenterCenter>
   </Layout>
 )
