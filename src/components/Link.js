@@ -17,17 +17,6 @@ const LinkStyles = css`
   line-height: 1rem;
   border-bottom: 1px solid white;
 
-  &:after {
-    content: '';
-    position: absolute;
-    opacity: 0;
-    width: 0.5rem;
-    height: 0.5rem;
-    left: -0.875rem;
-    top: 0.25rem;
-    transform: rotate(45deg);
-  }
-
   &:hover,
   &:active {
     border-bottom: 1px solid transparent;
