@@ -3,24 +3,22 @@ import styled, { css, keyframes } from 'styled-components'
 import { Link as GatsbyLink } from 'gatsby'
 
 const glow = keyframes`
-  0% { opacity: 1; }
- 50% { opacity: 0.65; }
- 100% { opacity: 1; }
+  0% { text-shadow: 0 0 0 hsla(0, 100%, 100%, 1); }
+ 50% { text-shadow: 0 0 6px hsla(0, 100%, 100%, 0.5); }
+ 100% { text-shadow: 0 0 0 hsla(0, 100%, 100%, 1); }
 `
 
 const LinkStyles = css`
   text-decoration: none;
   color: #fafafa;
-  transition: border-bottom 180ms ease-in-out;
   position: relative;
-  height: 1rem;
-  line-height: 1rem;
-  border-bottom: 1px solid white;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  margin: 0 0 0 0.2rem;
 
   &:hover,
   &:active {
-    border-bottom: 1px solid transparent;
-    animation: ${glow} 1200ms 120ms ease-in-out infinite;
+    animation: ${glow} 2000ms 120ms ease-in-out infinite;
   }
 `
 

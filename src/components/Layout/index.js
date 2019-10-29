@@ -1,17 +1,13 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import PageLimit from '../PageLimit'
+import { ExternalLink } from '../Link'
 import Header from '../Header'
 import './styles.css'
+import CenterCenter from '../CenterCenter'
+import Footer from '../Footer.js'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,9 +23,18 @@ const Layout = ({ children }) => {
   return (
     <PageLimit>
       <Header siteTitle={data.site.siteMetadata.title} />
+
       <main>{children}</main>
 
-      <footer></footer>
+      <Footer>
+        <CenterCenter>
+          Made by Leo. 2019. View code on{' '}
+          <ExternalLink href="https://github.com/leocreatini/leocreatini">
+            GitHub
+          </ExternalLink>
+          .
+        </CenterCenter>
+      </Footer>
     </PageLimit>
   )
 }

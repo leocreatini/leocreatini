@@ -9,7 +9,7 @@ import { H2, P } from '../components/Typography'
 import { InternalLink } from '../components/Link'
 import CenterCenter from '../components/CenterCenter'
 
-const ResponsiveCard = styled(Card)`
+const ResponsiveCard = styled(Card.Base)`
   width: 18rem;
 
   @media (min-width: 450px) {
@@ -26,26 +26,28 @@ const AboutPage = () => (
     <SEO title="About" />
     <CenterCenter>
       <ResponsiveCard>
-        <FlexBox
-          alignItems="center"
-          justifyContent="space-between"
-          margin="0 0 1.5rem"
-        >
-          <H2 margin="0">About</H2>
-          <InternalLink to="/">Go Back</InternalLink>
-        </FlexBox>
-        <P>High 20's leveled Web Dev. Human.</P>
-        <P>
-          Born in Buenos Aires, I came to United States when I was four. A
-          tinkerer at heart, I grew up with legos, games, and naturally evolved
-          into design and engineering.
-        </P>
-        <P>
-          My passion lies in learning new skills and creating meaningful
-          products. For me, it's not enough to make something beautiful or
-          useful — it has to spark curiosity, solve something important, and
-          feel like a natural extension of your body.
-        </P>
+        <Card.Body>
+          <FlexBox
+            alignItems="center"
+            justifyContent="space-between"
+            margin="0 0 1.5rem"
+          >
+            <H2 margin="0">About</H2>
+            <InternalLink to="/">Go Back</InternalLink>
+          </FlexBox>
+          <P>High 20's leveled Web Dev. Human.</P>
+          <P>
+            Born in Buenos Aires, I came to United States when I was four. A
+            tinkerer at heart, I grew up with legos, games, and naturally
+            evolved into design and engineering.
+          </P>
+          <P>
+            My passion lies in learning new skills and creating meaningful
+            products. For me, it's not enough to make something beautiful or
+            useful — it has to spark curiosity, solve something important, and
+            feel like a natural extension of your body.
+          </P>
+        </Card.Body>
       </ResponsiveCard>
     </CenterCenter>
   </Layout>
