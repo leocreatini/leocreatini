@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Leo Creatini`,
+        short_name: `Leo Creatini`,
         start_url: `/`,
         background_color: `#1c1717`,
         theme_color: `#1c1717`,
