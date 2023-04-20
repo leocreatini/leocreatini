@@ -24,9 +24,8 @@ export default function PostPage({ content, meta }: PostPageProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostSlugs()
   return {
-    paths,
+    paths: getAllPostSlugs(),
     fallback: false,
   }
 }

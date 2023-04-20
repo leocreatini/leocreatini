@@ -10,7 +10,6 @@ export const getAllPostSlugs = () => {
     const fileContent = fs.readFileSync(fullPath, 'utf8')
     const { data } = matter(fileContent)
     const [year, month, day] = data.date.split('-')
-
     return {
       params: {
         slug: `${year}-${month}-${day}-${data.slug}`,
