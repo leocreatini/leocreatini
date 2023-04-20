@@ -2,9 +2,9 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
+import Head from 'next/head'
 // local
 import { getAllPostSlugs, getPostData } from '@libs/posts'
-import Head from 'next/head'
 
 interface PostPageProps {
   content: MDXRemoteSerializeResult

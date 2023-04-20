@@ -3,19 +3,14 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+const remarkReact = import('remark-react')
 
-// configure MDX
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
-})
-
-const remarkHtml = import('remark-html')
-const remarkPrism = import('remark-prism')
-
-module.exports = withMDX({
   options: {
-    remarkPlugins: [remarkHtml, remarkPrism],
+    remarkPlugins: [remarkReact],
   },
-  pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
 })
+
+module.exports = nextConfig
+module.exports = withMDX({})
